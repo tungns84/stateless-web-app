@@ -53,6 +53,8 @@ Build Web Application Stateless
 └───resources
     ├───static
     └───templates
+
+
 ```
 # Mapper
 ```java
@@ -93,3 +95,6 @@ public interface UserMapper {
     }
 }
 ```
+# API Docs
+Sử dụng SwaggerUI(https://swagger.io) để generate API Docs.
+Xem ví dụ ở ``link``: [Ví dụ về API Docs sử dụng SwaggerUI](http://10.15.68.50:8082)
