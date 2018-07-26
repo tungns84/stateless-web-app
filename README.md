@@ -98,4 +98,4 @@ public interface UserMapper {
 # API Docs
 Sử dụng ``SwaggerUI``(https://swagger.io) để generate API Docs
 
-Ví dụ về API Docs sử dụng SwaggerUI [API Docs](http://10.15.68.50:8082)
+Demo [``API Docs``](http://10.15.68.50:8082)
