@@ -73,7 +73,13 @@ Phát triển ứng dụng web sử dụng ReactJS và RESTFul Web Services.
       * ``util``: code các utilities cho hệ thống
       * ``web``: code xử lý cho tầng view (REST/MVC controller)
 * ``resources``:
-# Mapper
+# Code Example
+## Sequence Diagram
+## Controller Layer
+## Service Layer
+## Repository Layer
+## ``Mapper``
+Sử dụng MapStruct để ``mapping value`` từ `entity` sang `dto` và `ngược lại`
 ```java
 package com.fps.mpits.modules.auth.mapper;
 
