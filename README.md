@@ -90,8 +90,7 @@ Alice->John: Yes... John, how are you?
 ## Service Layer
 ## Repository Layer
 ## ``Mapper``
-> **Note**:
-Sử dụng MapStruct để ``mapping value`` từ `entity` sang `dto` và `ngược lại`
+>**Note**:Sử dụng MapStruct để ``mapping value`` từ `entity` sang `dto` và `ngược lại`
 ```java
 package com.fps.mpits.modules.auth.mapper;
 
