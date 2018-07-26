@@ -75,8 +75,7 @@ Phát triển ứng dụng web sử dụng ReactJS và RESTFul Web Services.
 * ``resources``:
 # Code Example
 ## Sequence Diagram
-```mermaid
-sequenceDiagram
+```seq
 Alice ->> Bob: Hello Bob, how are you?
 Bob-->>John: How about you John?
 Bob--x Alice: I am good thanks!
