@@ -3,16 +3,16 @@
 Phát triển ứng dụng web sử dụng ReactJS và RESTFul Web Services.
 
 # Công nghệ sử dụng
-* [``Java 8``](https://www.java.com) - Ngôn ngữ phát triển lớp back-end
-* [``Maven 3+``](https://maven.apache.org/) - Quản lý các dependency sử dụng trong dự án
-* [``Spring Framework``](https://spring.io/) - Sử dụng phát triển lớp back-end
+* [``Java 8``](https://www.java.com) - Ngôn ngữ phát triển lớp ``back-end``
+* [``Maven 3+``](https://maven.apache.org/) - Quản lý các ``dependency`` sử dụng trong dự án
+* [``Spring Framework``](https://spring.io/) - Sử dụng phát triển lớp ``back-end``
     * Spring Boot
     * Spring Web
     * Spring Security
     * Spring Data JPA
-    * 
-* [``ReactJS``](https://reactjs.org/) - Sử dụng phát triển lớp front-end
-* [``JWT - JSON Web Token``](https://jwt.io/) - Sử dụng để quản lý việc xác thực người dùng hệ thống
+* [``MapStruct``](http://mapstruct.org/) - Sử dụng mapping ``dto-entity-dto``
+* [``ReactJS``](https://reactjs.org/) - Sử dụng phát triển lớp ``front-end``
+* [``JWT - JSON Web Token``](https://jwt.io/) - Sử dụng để quản lý việc ``xác thực`` người dùng hệ thống
 # Project Structure
 ```bash
 ├───frontend
@@ -59,14 +59,20 @@ Phát triển ứng dụng web sử dụng ReactJS và RESTFul Web Services.
 * ``java``: thư mục gốc chứa mã nguồn lớp back-end
    * ``com.fps.mpits``: root package 
       * ``configuration``: package xử lý phần cấu hình chung
-         * ``database``: xử lý cấu hình cho Database
-         * ``security``: xử lý cấu hình bảo mật
-      * ``exception``: xử lý các exception
+         * ``database``: code cấu hình cho Database
+         * ``security``: code cấu hình bảo mật hệ thống
+      * ``exception``: code các exception
       * ``logging``:
-      * ``modules``: viết logic xử lý từng chức năng
-      * ``util``: viết các utilities cho hệ thống
-      * ``web``: xử lý tại tầng view(REST/MVC controller)
-
+      * ``modules``: code logic xử lý từng chức năng
+         * ``module1``: chức năng 1
+            * ``dto``:
+            * ``entity``:
+            * ``mapper``:
+            * ``repository``:
+            * ``service``:
+      * ``util``: code các utilities cho hệ thống
+      * ``web``: code xử lý cho tầng view (REST/MVC controller)
+* ``resources``:
 # Mapper
 ```java
 package com.fps.mpits.modules.auth.mapper;
