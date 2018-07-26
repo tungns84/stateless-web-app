@@ -50,4 +50,42 @@ Build Web Application Stateless
     ├───static
     └───templates
 ```
+# Mapper
+```java
+package com.fps.mpits.modules.auth.mapper;
 
+import com.fps.mpits.modules.auth.entity.Role;
+import com.fps.mpits.modules.auth.entity.RoleCategory;
+import com.fps.mpits.modules.auth.entity.User;
+import com.fps.mpits.modules.auth.dto.UserDTO;
+import com.fps.mpits.modules.auth.repo.IRoleRepository;
+import com.google.common.base.Enums;
+import org.mapstruct.*;
+import org.mapstruct.factory.Mappers;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+@Mapper
+public interface UserMapper {
+    static UserMapper MAPPER = Mappers.getMapper(UserMapper.class);
+
+    @Mappings({
+            @Mapping(source = "dto", target = "roles",qualifiedByName = {"MapStringToEnum"})
+    })
+    public User map(UserDTO dto, @Context IRoleRepository roleRepository);
+
+    @Mapping(source = "user", target = "roles", qualifiedByName = "MapEnumToString")
+    public UserDTO map(User user);
+
+    @Named("MapStringToEnum")
+    default Set<Role> transformStringToEnumRole(UserDTO dto, @Context IRoleRepository roleRepository){
+        return dto.getRoles().stream().map(role->roleRepository.findByName(Enums.getIfPresent(RoleCategory.class,role).orNull()))
+                .filter(Optional::isPresent).map(Optional::get).collect(Collectors.toSet());
+    }
+    @Named("MapEnumToString")
+    default Set<String> transformEnumToStringRole(User user){
+        return user.getRoles().stream().map(role->role.getName().name()).collect(Collectors.toSet());
+    }
+}
+```
