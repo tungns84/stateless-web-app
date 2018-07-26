@@ -1,12 +1,16 @@
-# stateless-web-app
+# New Web App
 Build Web Application Stateless
-# Dependencies
-![](https://img.shields.io/badge/java_8-✓-blue.svg)
-![](https://img.shields.io/badge/maven_3+-✓-blue.svg)
-![](https://img.shields.io/badge/spring_boot-✓-blue.svg)
-![](https://img.shields.io/badge/swagger_2-✓-blue.svg)
-![](https://img.shields.io/badge/oracle-✓-blue.svg)
-![](https://img.shields.io/badge/mapstruct-✓-blue.svg)
+# Technical Stack
+* [Java 8](https://www.java.com) - The programming language used
+* [Maven 3+](https://maven.apache.org/) - Dependency and build Management
+* [Spring Framework](https://spring.io/) - Used to developing back-end layer
+    * Spring Boot
+    * Spring Web
+    * Spring Security
+    * Spring Data JPA
+    * 
+* [ReactJS](https://reactjs.org/) - Used to developing front-end layer
+* [JWT](https://jwt.io/) - JSON Web Token. Used to manage Authorization process
 # Project Structure
 ```bash
 ├───frontend
