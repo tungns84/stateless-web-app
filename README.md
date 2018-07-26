@@ -1,16 +1,18 @@
 # New Web App
-Build Web Application Stateless
-# Technical Stack
-* [Java 8](https://www.java.com) - The programming language used
-* [Maven 3+](https://maven.apache.org/) - Dependency and build Management
-* [Spring Framework](https://spring.io/) - Used to developing back-end layer
+
+Phát triển ứng dụng web sử dụng ReactJS và RESTFul Web Services.
+
+# Công nghệ sử dụng
+* [``Java 8``](https://www.java.com) - Ngôn ngữ phát triển lớp back-end
+* [``Maven 3+``](https://maven.apache.org/) - Quản lý các dependency sử dụng trong dự án
+* [``Spring Framework``](https://spring.io/) - Sử dụng phát triển lớp back-end
     * Spring Boot
     * Spring Web
     * Spring Security
     * Spring Data JPA
     * 
-* [ReactJS](https://reactjs.org/) - Used to developing front-end layer
-* [JWT](https://jwt.io/) - JSON Web Token. Used to manage Authorization process
+* [``ReactJS``](https://reactjs.org/) - Sử dụng phát triển lớp front-end
+* [``JWT - JSON Web Token``](https://jwt.io/) - Sử dụng để quản lý việc xác thực người dùng hệ thống
 # Project Structure
 ```bash
 ├───frontend
@@ -53,9 +55,18 @@ Build Web Application Stateless
 └───resources
     ├───static
     └───templates
-
-
 ```
+* ``java``: thư mục gốc chứa mã nguồn lớp back-end
+   * ``com.fps.mpits``: root package 
+      * ``configuration``: package xử lý phần cấu hình chung
+         * ``database``: xử lý cấu hình cho Database
+         * ``security``: xử lý cấu hình bảo mật
+      * ``exception``: xử lý các exception
+      * ``logging``:
+      * ``modules``: viết logic xử lý từng chức năng
+      * ``util``: viết các utilities cho hệ thống
+      * ``web``: xử lý tại tầng view(REST/MVC controller)
+
 # Mapper
 ```java
 package com.fps.mpits.modules.auth.mapper;
