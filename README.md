@@ -2,6 +2,7 @@
 Build Web Application Stateless
 # Dependencies
 ![](https://img.shields.io/badge/java_8-✓-blue.svg)
+![](https://img.shields.io/badge/maven_3+-✓-blue.svg)
 ![](https://img.shields.io/badge/spring_boot-✓-blue.svg)
 ![](https://img.shields.io/badge/swagger_2-✓-blue.svg)
 ![](https://img.shields.io/badge/oracle-✓-blue.svg)
